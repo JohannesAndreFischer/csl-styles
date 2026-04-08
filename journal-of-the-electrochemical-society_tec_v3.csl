@@ -136,6 +136,12 @@
           </group>
           <text macro="issued" prefix=" (" suffix=")"/>
         </else>
+          <if variable="page">
+            <text variable="page"/>
+          </if>
+          <else>
+            <text variable="DOI" prefix=", doi:"/>
+          </else>
       </choose>
       <text prefix=" " macro="access" suffix="."/>
     </layout>
