@@ -100,7 +100,6 @@
         </if>
         <else-if type="bill book graphic legal_case motion_picture report song" match="any">
           <group>
-            <text macro="title" prefix=" "/>
             <text macro="editor" prefix=" "/>
           </group>
           <group prefix=", " delimiter=", ">
