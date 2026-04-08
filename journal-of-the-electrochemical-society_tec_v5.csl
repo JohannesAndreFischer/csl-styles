@@ -132,15 +132,16 @@
           <group prefix=" " delimiter=", ">
             <text form="short" variable="container-title" font-style="italic"/>
             <text variable="volume" font-weight="bold"/>
-            <text variable="page"/>
+            <choose>
+              <if variable="page">
+                <text variable="page"/>
+              </if>
+              <else>
+                <text variable="DOI" prefix="doi:"/>
+              </else>
+            </choose>
           </group>
           <text macro="issued" prefix=" (" suffix=")"/>
-        </else>
-        <if variable="page">
-          <text variable="page"/>
-        </if>
-        <else>
-          <text variable="DOI" prefix=", doi:"/>
         </else>
       </choose>
       <text prefix=" " macro="access" suffix="."/>
